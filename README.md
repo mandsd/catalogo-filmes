@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Catálogo de Filmes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicação web desenvolvida em React para gerenciar um catálogo de filmes, com funcionalidades de autenticação, cadastro e listagem de filmes.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Autenticação de usuários (login/registro)
+- Cadastro de filmes com validação de formulário
+- Listagem de filmes com filtro por gênero
+- Interface responsiva para desktop e mobile
+- Navegação intuitiva entre as páginas
+- Persistência de dados no localStorage
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- Material-UI
+- React Router
+- Formik & Yup (validação de formulários)
+- Context API (gerenciamento de estado)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Como Executar o Projeto
 
-### `npm test`
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Acesse a aplicação em `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Estrutura do Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+  ├── components/         # Componentes React
+  ├── contexts/          # Contextos para gerenciamento de estado
+  ├── types/             # Definições de tipos TypeScript
+  └── App.tsx            # Componente principal
+```
 
-### `npm run eject`
+## Funcionalidades Implementadas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Autenticação
+- Login com email e senha
+- Registro de novos usuários
+- Proteção de rotas para usuários autenticados
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Catálogo de Filmes
+- Cadastro de filmes com:
+  - Nome
+  - Gênero
+  - Nota (0-10)
+  - Comentário
+- Listagem de filmes com filtro por gênero
+- Exclusão de filmes
+- Interface responsiva
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contribuição
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
