@@ -1,8 +1,8 @@
 {
-  "name": "projeto_react",
+  "name": "catalogo-filmes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mandsd.github.io/catalogo-filmes",
+  "homepage": "https://mandsd.github.io/catalogo-filmes/",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -30,7 +30,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
