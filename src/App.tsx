@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { MoviesProvider } from './contexts/MoviesContext';
@@ -105,23 +105,9 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route
-                path="/movies"
-                element={
-                  <PrivateRoute>
-                    <MovieList />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/add-movie"
-                element={
-                  <PrivateRoute>
-                    <MovieForm />
-                  </PrivateRoute>
-                }
-              />
-              <Route path="/" element={<Navigate to="/movies" />} />
+              <Route path="/movies" element={<PrivateRoute><MovieList /></PrivateRoute>} />
+              <Route path="/add-movie" element={<PrivateRoute><MovieForm /></PrivateRoute>} />
+              <Route path="/" element={<Navigate to="/movies" replace />} />
             </Routes>
           </Router>
         </MoviesProvider>
